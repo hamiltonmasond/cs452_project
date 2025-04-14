@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="MyDatabase" uuid="7e0c2084-43dc-4779-b63f-59b06b24475a">
+    <data-source source="LOCAL" name="GameLocker" uuid="3c547e30-605f-40c1-98ba-f7e592a54afc">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>gameregister.cufuusq0mgnn.us-east-1.rds.amazonaws.com</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

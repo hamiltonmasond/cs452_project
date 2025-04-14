@@ -15,18 +15,10 @@ def create_new_entry(request):
         lastPlayed = data.get('lastPlayed', "")
         rating = data.get('rating', 5) 
         description = data.get('description', "")
-
+        
         if not personId or not title:
             return HttpResponseBadRequest("Required fields'personId' and 'title' must be provided.")
         
-def get_all_entries(request):
-    if request == "GET":
-        try:
-            data = json.loads(request.body)
-        except json.JSONDecodeError:
-            return HttpResponseBadRequest("Invalid data provided.")
-        
-        personId = data.get('personId')
         
 
         

@@ -20,7 +20,25 @@ export interface Entry {
 export class LandingPageComponent implements OnInit {
 
   public displayedColumns: Array<string> = ['title', 'lastPlayed', 'rating', 'description', 'actions']; 
-  allEntries: any[] = [];
+  allEntries: any[] = [{
+    'personId': 1,
+    'title': 'Elden Ring',
+    'lastPlayed': '03/12/2025',
+    'rating': 9,
+    'description': 'Git gud'
+  }, {
+    'personId': 2,
+    'title': 'Tears of the Kingdom',
+    'lastPlayed': '10/26/2024',
+    'rating': 9,
+    'description': 'Hyah'
+  }, {
+    'personId': 1,
+    'title': 'Goat Simulator 3',
+    'lastPlayed': '02/14/2025',
+    'rating': 7,
+    'description': 'Baaaaa'
+  }];
 
   constructor(
     private client: HttpClient, 

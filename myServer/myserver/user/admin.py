@@ -10,6 +10,6 @@ class UserAdmin(admin.ModelAdmin):
         (None, {'fields': ['username']}),
         (None, {'fields': ['password']})
     ]
-    list_display = ('personId', 'title', 'lastPlayed', 'rating', 'description')
+    list_display = ('personId', 'firstName', 'lastName', 'username', 'password')
 
 admin.site.register(User, UserAdmin)
