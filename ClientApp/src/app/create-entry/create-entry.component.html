@@ -1,0 +1,56 @@
+<app-nav-menu></app-nav-menu>
+<section class="entry-details">
+  <mat-card class="section-details">
+    <mat-card-title class="section-details-title">Game Info</mat-card-title>
+    <form [formGroup]="entryForm">
+      <section class="section-details-body">
+        <div class="input-wrap-row">
+          <div class="input-wrap">
+            <mat-form-field appearance="outline" class="input-wrap__input">
+              <mat-label>Title</mat-label>
+              <input matInput formControlName="title" placeholder="Title">
+              <mat-error *ngIf="entryForm.get('title')?.invalid && entryForm.get('title')?.touched">
+                Title is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="input-wrap">
+            <mat-form-field appearance="outline" class="input-wrap__input">
+              <mat-label>Last Played</mat-label>
+              <input matInput formControlName="lastPlayed" placeholder="Last Played">
+              <mat-error *ngIf="entryForm.get('lastPlayed')?.invalid && entryForm.get('lastPlayed')?.touched">
+                Last date played is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="input-wrap-row">
+          <div class="input-wrap">
+            <mat-form-field appearance="outline" class="input-wrap__input">
+              <mat-label>Rating</mat-label>
+              <mat-select formControlName="status">
+                <mat-option *ngFor="let rating of ratings" [value]="rating">{{ rating }}</mat-option>
+            </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <mat-card-title class="section-details-title">Description</mat-card-title>
+      <section class="section-details-body">
+        <div class="input-wrap-row">
+          <div class="input-wrap">
+            <mat-form-field appearance="outline" class="input-wrap__input">
+              <mat-label>Description</mat-label>
+              <input matInput formControlName="description" placeholder="What did you think?">
+            </mat-form-field>
+          </div>
+        </div>
+      </section>
+      <hr />
+    </form>
+    <mat-card-actions class="details-buttons">
+      <button mat-button color="primary" (click)="onSubmit()">SAVE</button>
+    </mat-card-actions>
+</mat-card>
+</section>
